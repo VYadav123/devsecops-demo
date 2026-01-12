@@ -67,14 +67,14 @@ The game implements the following rules:
    yarn
    ```
 
-3. Start the development server:
+3. Start the development server in Windows
    ```bash
-   npm run dev
+   npm run dev -- --host
    # or
    yarn dev
    ```
 
-4. Open your browser and navigate to `http://localhost:5173`
+4. Open your browser and navigate to `http://VM-IP:5173`, also you need to open the Inbound port in cloud
 
 ## Building for Production
 
