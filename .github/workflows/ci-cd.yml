@@ -101,7 +101,10 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.TOKEN }}
-      
+          
+      - name: Converting image name to lower case
+        run: echo "IMAGE_NAME=$(echo $GITHUB_REPOSITORY | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
+        
       - name: Extract metadata for Docker
         id: meta
         uses: docker/metadata-action@v5
